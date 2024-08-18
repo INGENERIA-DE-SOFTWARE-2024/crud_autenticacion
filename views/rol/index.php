@@ -1,7 +1,7 @@
 <h1 class="text-center mb-4">FORMULARIO PARA INGRESAR APLICACIONES</h1>
 <div class="row justify-content-center">
     <div class="border shadow p-4 col-lg-6 text-center">
-        <form id="formAplicacion">
+        <form id="formUsuario">
             <input type="hidden" name="app_id" id="app_id">
             <div class="row mb-3">
                 <div class="col">
