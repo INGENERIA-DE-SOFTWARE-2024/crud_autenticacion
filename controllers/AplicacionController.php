@@ -25,7 +25,7 @@ class AplicacionController
             http_response_code(200);
             echo json_encode([
                 'codigo' => 1,
-                'mensaje' => 'Aplicación guardado exitosamente',
+                'mensaje' => 'Aplicación guardada exitosamente',
             ]);
         } catch (Exception $e) {
             http_response_code(500);
@@ -40,8 +40,6 @@ class AplicacionController
     public static function buscarAPI()
     {
         try {
-            // ORM - ELOQUENT
-            // $productos = Producto::all();
             $aplicaciones = Aplicacion::obtenerAplicacionesconQuery();
             http_response_code(200);
             echo json_encode([
@@ -86,26 +84,22 @@ class AplicacionController
 
     public static function eliminarAPI()
     {
-
         $id = filter_var($_POST['app_id'], FILTER_SANITIZE_NUMBER_INT);
         try {
-
             $aplicacion = Aplicacion::find($id);
-            // $producto->sincronizar([
-            //     'situacion' => 0
-            // ]);
-            // $producto->actualizar();
-            $aplicacion->eliminar();
-            http_response_code(200);
-            echo json_encode([
-                'codigo' => 1,
-                'mensaje' => 'Aplicación eliminado exitosamente',
-            ]);
+        
+                $aplicacion->eliminar();
+                http_response_code(200);
+                echo json_encode([
+                    'codigo' => 1,
+                    'mensaje' => 'App eliminada exitosamente',
+                ]);
+           
         } catch (Exception $e) {
             http_response_code(500);
             echo json_encode([
                 'codigo' => 0,
-                'mensaje' => 'Error al eliminado aplicación',
+                'mensaje' => 'Error al eliminar app',
                 'detalle' => $e->getMessage(),
             ]);
         }

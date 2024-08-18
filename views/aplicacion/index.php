@@ -10,10 +10,16 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col text-center">
-                    <button type="submit" class="btn btn-primary w-100">Enviar</button>
-                </div>
+            <div class="col">
+                <button type="submit" id="btnGuardar" class="btn btn-primary w-100">Guardar</button>
             </div>
+            <div class="col">
+                <button type="button" id="btnModificar" class="btn btn-warning w-100">Modificar</button>
+            </div>
+            <div class="col">
+                <button type="button" id="btnCancelar" class="btn btn-danger w-100">Cancelar</button>
+            </div>
+        </div>
         </form>
     </div>
 </div>
@@ -24,9 +30,10 @@
         <table class="table table-bordered table-hover" id="tablaAplicacion">
             <thead>
                 <tr>
-                    <th>NO.</th>
+                    <th>No.</th>
                     <th>Nombre</th>
-                    <th>Acciones</th>
+                    <th>Acción</th>
+                    <th>Acción</th>
                 </tr>
             </thead>
             <tbody>

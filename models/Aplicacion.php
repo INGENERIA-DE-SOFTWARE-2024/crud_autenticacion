@@ -27,4 +27,8 @@ class Aplicacion extends ActiveRecord
         $sql = "SELECT * FROM " . self::$tabla . " WHERE app_situacion = 1";
         return self::fetchArray($sql);
     }
+
 }
+
+
+
