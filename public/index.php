@@ -6,6 +6,7 @@ use MVC\Router;
 use Controllers\AppController;
 use Controllers\AplicacionController;
 use Controllers\UsuarioController;
+use Controllers\RolController;
 
 $router = new Router();
 $router->setBaseURL('/' . $_ENV['APP_NAME']);
@@ -24,6 +25,13 @@ $router->post('/API/usuario/guardar', [UsuarioController::class, 'guardarAPI']);
 $router->get('/API/usuario/buscar', [UsuarioController::class, 'buscarAPI']);
 $router->post('/API/usuario/modificar', [UsuarioController::class, 'modificarAPI']);
 $router->post('/API/usuario/eliminar', [UsuarioController::class, 'eliminarAPI']);
+
+//Rol
+$router->get('/rol', [RolController::class, 'index']);
+$router->post('/API/rol/guardar', [RolController::class, 'guardarAPI']);
+$router->get('/API/rol/buscar', [RolController::class, 'buscarAPI']);
+$router->post('/API/rol/modificar', [RolController::class, 'modificarAPI']);
+$router->post('/API/rol/eliminar', [RolController::class, 'eliminarAPI']);
 
 
 
