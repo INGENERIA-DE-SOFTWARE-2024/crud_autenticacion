@@ -34,19 +34,19 @@
                         <ul class="dropdown-menu  dropdown-menu-dark "id="dropwdownRevision" style="margin: 0;">
                             <!-- <h6 class="dropdown-header">Información</h6> -->
                             <li>
-                                <a class="dropdown-item nav-link text-white " href="/aplicacion/index"><i class="ms-lg-0 ms-2 bi bi-plus-circle me-2"></i>Aplicaciones</a>
+                                <a class="dropdown-item nav-link text-white " href="/crud_autenticacion/aplicacion"><i class="ms-lg-0 ms-2 bi bi-plus-circle me-2"></i>Aplicaciones</a>
                             </li>
 
                             <li>
-                                <a class="dropdown-item nav-link text-white " href="/usuario/index"><i class="ms-lg-0 ms-2 bi bi-plus-circle me-2"></i>Usuarios</a>
+                                <a class="dropdown-item nav-link text-white " href="/crud_autenticacion/usuario"><i class="ms-lg-0 ms-2 bi bi-plus-circle me-2"></i>Usuarios</a>
                             </li>
 
                             <li>
-                                <a class="dropdown-item nav-link text-white " href="/rol/index"><i class="ms-lg-0 ms-2 bi bi-plus-circle me-2"></i>Roles</a>
+                                <a class="dropdown-item nav-link text-white " href="/crud_autenticacion/rol"><i class="ms-lg-0 ms-2 bi bi-plus-circle me-2"></i>Roles</a>
                             </li>
 
                             <li>
-                                <a class="dropdown-item nav-link text-white " href="/permiso/index"><i class="ms-lg-0 ms-2 bi bi-plus-circle me-2"></i>Permisos</a>
+                                <a class="dropdown-item nav-link text-white " href="/crud_autenticacion/permiso"><i class="ms-lg-0 ms-2 bi bi-plus-circle me-2"></i>Permisos</a>
                             </li>
                         
                     
