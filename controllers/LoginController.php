@@ -19,7 +19,7 @@ class LoginController
         isAuth();
         $_SESSION = [];
         session_destroy();
-        header('Location: /login_test/');
+        header('Location: /crud_autenticacion/');
     }
 
     public static function registro(Router $router)
@@ -31,7 +31,7 @@ class LoginController
     public static function menu(Router $router)
     {
         isAuth();
-        hasPermission(['TIENDA_ADMIN', 'TIENDA_USER']);
+        // hasPermission(['TIENDA_ADMIN', 'TIENDA_USER']);
         $router->render('pages/menu', [], 'layouts/menu');
     }
 

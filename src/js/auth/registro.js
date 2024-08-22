@@ -15,7 +15,7 @@ const registrar = async (e) => {
 
     try {
         const body = new FormData(formulario)
-        const url = "/login_test/API/registro"
+        const url = "/crud_autenticacion/API/registro"
         const config = {
             method: 'POST',
             body

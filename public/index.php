@@ -22,7 +22,7 @@ $router->post('/API/login', [LoginController::class, 'loginAPI']);
 
 
 //Aplicación
-$router->get('/', [AppController::class,'index']);
+// $router->get('/', [AppController::class,'index']);
 $router->get('/aplicacion', [AplicacionController::class, 'index']);
 $router->post('/API/aplicacion/guardar', [AplicacionController::class, 'guardarAPI']);
 $router->get('/API/aplicacion/buscar', [AplicacionController::class, 'buscarAPI']);
