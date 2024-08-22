@@ -3,7 +3,7 @@
 <div class="row justify-content-center">
     <div class="border shadow p-4 col-lg-6 text-center">
         <form id="formRol">
-            <input type="hidden" name="rol_id" id="rol_id">
+        <input type="hidden" name="rol_id" id="rol_id">
             <div class="row mb-3">
                 <div class="row">
                 <div class="col">

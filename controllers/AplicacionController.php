@@ -84,11 +84,15 @@ class AplicacionController
 
     public static function eliminarAPI()
     {
+        getHeadersApi();
         $id = filter_var($_POST['app_id'], FILTER_SANITIZE_NUMBER_INT);
         try {
-            $aplicacion = Aplicacion::find($id);
-        
-                $aplicacion->eliminar();
+                $aplicacion = Aplicacion::find($id);
+                 $aplicacion->sincronizar([
+                 'app_situacion' => 0
+                  ]);
+
+                $aplicacion->actualizar();
                 http_response_code(200);
                 echo json_encode([
                     'codigo' => 1,

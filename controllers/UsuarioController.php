@@ -108,7 +108,11 @@ class UsuarioController
         try {
 
             $usuario = Usuario::find($id);
-            $usuario->eliminar();
+            $usuario->sincronizar([
+                'usu_situacion' => 0
+                 ]);
+                 
+                 $usuario->actualizar();
             http_response_code(200);
             echo json_encode([
                 'codigo' => 1,

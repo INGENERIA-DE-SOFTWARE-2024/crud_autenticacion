@@ -65,8 +65,7 @@ class RolController
     public static function modificarAPI()
     {
         $_POST['rol_nombre'] = htmlspecialchars($_POST['rol_nombre']);
-        $_POST['rol_nombre_ct'] = htmlspecialchars($_POST['rol_nombre_ct']);
-        $_POST['rol_app'] = filter_var($_POST['rol_app'], FILTER_SANITIZE_NUMBER_INT);
+        
         $id = filter_var($_POST['rol_id'], FILTER_SANITIZE_NUMBER_INT);
         try {
             $rol = Rol::find($id);
@@ -93,7 +92,11 @@ class RolController
         try {
 
             $rol = Rol::find($id);
-            $rol->eliminar();
+            $rol->sincronizar([
+                'rol_situacion' => 0
+                 ]);
+
+                 $rol->actualizar();
             http_response_code(200);
             echo json_encode([
                 'codigo' => 1,

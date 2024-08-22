@@ -29,6 +29,7 @@ class Rol extends ActiveRecord
     public static function obtenerRolesconQuery()
     {
         $sql = "SELECT
+        r.rol_id,
     r.rol_nombre,
     r.rol_nombre_ct,
     a.app_nombre
@@ -43,6 +44,8 @@ WHERE
 
         return self::fetchArray($sql);
     }
+
+
 
 }
 

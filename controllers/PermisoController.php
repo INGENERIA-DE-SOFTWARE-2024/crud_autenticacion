@@ -93,7 +93,11 @@ class PermisoController
 
         try {
             $permiso = Permiso::find($id);
-            $permiso->eliminar();
+            $permiso->sincronizar([
+                'permiso_situacion' => 0
+                 ]);
+
+               $permiso->actualizar();
             http_response_code(200);
             echo json_encode([
                 'codigo' => 1,

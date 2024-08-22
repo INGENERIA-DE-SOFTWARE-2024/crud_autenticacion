@@ -199,7 +199,7 @@ const eliminar = async (aplicacion) => {
         cancelButtonText: 'No, cancelar',
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-    });
+    })
 
     if (confirmacion.isConfirmed) {
         try {
