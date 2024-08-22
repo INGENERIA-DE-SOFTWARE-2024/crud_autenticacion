@@ -8,9 +8,18 @@ use Controllers\AplicacionController;
 use Controllers\UsuarioController;
 use Controllers\RolController;
 use Controllers\PermisoController;
+use Controllers\LoginController;
 
 $router = new Router();
 $router->setBaseURL('/' . $_ENV['APP_NAME']);
+
+$router->get('/', [LoginController::class, 'login']);
+$router->get('/logout', [LoginController::class, 'logout']);
+$router->get('/menu', [LoginController::class, 'menu']);
+$router->get('/registro', [LoginController::class, 'registro']);
+$router->post('/API/registro', [LoginController::class, 'registroAPI']);
+$router->post('/API/login', [LoginController::class, 'loginAPI']);
+
 
 //Aplicación
 $router->get('/', [AppController::class,'index']);
