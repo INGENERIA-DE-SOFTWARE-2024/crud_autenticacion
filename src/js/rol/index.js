@@ -5,9 +5,9 @@ import Swal from "sweetalert2";
 
 const formulario = document.getElementById('formRol');
 const TablaRol = document.getElementById('tablaRol');
-const BtnGuardar = document.getElementById('BtnGuardar');
-const BtnModificar = document.getElementById('BtnModificar');
-const BtnCancelar = document.getElementById('BtnCancelar');
+const BtnGuardar = document.getElementById('btnGuardar');
+const BtnModificar = document.getElementById('btnModificar');
+const BtnCancelar = document.getElementById('btnCancelar');
 
 TablaRol.parentElement.parentElement.classList.add('d-none');
 BtnModificar.parentElement.classList.add('d-none');
@@ -92,7 +92,7 @@ const Buscar = async () => {
 
     const respuesta = await fetch(url, config);
     const data = await respuesta.json();
-    // console.log(data);
+
     TablaRol.tBodies[0].innerHTML = '';
     const fragment = document.createDocumentFragment();
     let contador = 1;
