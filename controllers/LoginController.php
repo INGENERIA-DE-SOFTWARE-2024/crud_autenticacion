@@ -12,7 +12,7 @@ class LoginController
     public static function login(Router $router)
     {
         isNotAuth();
-        $router->render('auth/login', []);
+        $router->render('auth/login', [ ],  'layouts/layout');
     }
     public static function logout()
     {
@@ -25,13 +25,13 @@ class LoginController
     public static function registro(Router $router)
     {
         isAuth();
-        hasPermission(['TIENDA_ADMIN']);
+        hasPermission(['ADMINISTRADOR_LOGIN']);
         $router->render('auth/registro', [], 'layouts/menu');
     }
     public static function menu(Router $router)
     {
         isAuth();
-        // hasPermission(['TIENDA_ADMIN', 'TIENDA_USER']);
+        hasPermission(['ADMINISTRADOR_LOGIN', 'USUARIO_LOGIN']);
         $router->render('pages/menu', [], 'layouts/menu');
     }
 
@@ -99,7 +99,7 @@ class LoginController
                     $_SESSION['user'] = $usuarioBD;
 
                     // OBTIENE TODOS LOS PERMISOS DEL USUARIO
-                    $permisos = Permiso::fetchArray("SELECT * FROM permiso inner join rol on permiso_rol = rol_id where permiso_usuario = " . $usuarioBD['usu_id']);
+                    $permisos = Permiso::fetchArray("SELECT * FROM permiso inner join rol on permiso_rol = rol_id where rol_situacion = 1 AND permiso_usuario = " . $usuarioBD['usu_id']);
                     // GENERA UNA VARIABLE DE SESION POR CADA PERMISO 
                     foreach ($permisos as $permiso) {
                         $_SESSION[$permiso['rol_nombre_ct']] = 1;

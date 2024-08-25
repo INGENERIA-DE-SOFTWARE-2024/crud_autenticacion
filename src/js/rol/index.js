@@ -92,7 +92,7 @@ const Buscar = async () => {
 
     const respuesta = await fetch(url, config);
     const data = await respuesta.json();
-
+    console.log(data);
     TablaRol.tBodies[0].innerHTML = '';
     const fragment = document.createDocumentFragment();
     let contador = 1;

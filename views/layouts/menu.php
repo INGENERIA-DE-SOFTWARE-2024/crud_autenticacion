@@ -7,7 +7,7 @@
     <script src="<?= asset('build/js/app.js') ?>"></script>
     <link rel="shortcut icon" href="<?= asset('images/cit.png') ?>" type="image/x-icon">
     <link rel="stylesheet" href="<?= asset('build/styles.css') ?>">
-    <title>Base 2</title>
+    <title>USUARIO</title>
 </head>
 
 <body>
@@ -36,7 +36,16 @@
                         <ul class="dropdown-menu  dropdown-menu-dark " id="dropwdownRevision" style="margin: 0;">
                             <!-- <h6 class="dropdown-header">Información</h6> -->
                             <li>
-                                <a class="dropdown-item nav-link text-white " href="/login_test/registro"><i class="ms-lg-0 ms-2 bi bi-plus-circle me-2"></i>Registro de usuarios</a>
+                                <a class="dropdown-item nav-link text-white " href="/crud_autenticacion/usuario"><i class="ms-lg-0 ms-2 bi bi-plus-circle me-2"></i>usuarios</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item nav-link text-white " href="/crud_autenticacion/aplicacion"><i class="ms-lg-0 ms-2 bi bi-plus-circle me-2"></i>aplicaciones</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item nav-link text-white " href="/crud_autenticacion/rol"><i class="ms-lg-0 ms-2 bi bi-plus-circle me-2"></i>roles</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item nav-link text-white " href="/crud_autenticacion/permiso"><i class="ms-lg-0 ms-2 bi bi-plus-circle me-2"></i>permisos</a>
                             </li>
 
 
@@ -47,7 +56,7 @@
                 </ul>
                 <div class="col-lg-1 d-grid mb-lg-0 mb-2">
                     <!-- Ruta relativa desde el archivo donde se incluye menu.php -->
-                    <a href="/login_test/logout" class="btn btn-danger"><i class="bi bi-arrow-bar-left"></i>Salir</a>
+                    <a href="/crud_autenticacion/logout" class="btn btn-danger"><i class="bi bi-arrow-bar-left"></i>Salir</a>
                 </div>
 
 

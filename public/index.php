@@ -21,8 +21,12 @@ $router->post('/API/registro', [LoginController::class, 'registroAPI']);
 $router->post('/API/login', [LoginController::class, 'loginAPI']);
 
 
-//Aplicación
+
 // $router->get('/', [AppController::class,'index']);
+$router->get('/datatable', [AplicacionController::class, 'datatable']);
+
+
+//Aplicación
 $router->get('/aplicacion', [AplicacionController::class, 'index']);
 $router->post('/API/aplicacion/guardar', [AplicacionController::class, 'guardarAPI']);
 $router->get('/API/aplicacion/buscar', [AplicacionController::class, 'buscarAPI']);

@@ -108,4 +108,8 @@ class AplicacionController
             ]);
         }
     }
+
+    public static function datatable(Router $router){
+        $router->render('aplicacion/datatable', []);
+    }
 }

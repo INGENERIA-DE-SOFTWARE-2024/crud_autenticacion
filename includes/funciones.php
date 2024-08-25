@@ -19,7 +19,7 @@ function s($html)
 function isAuth()
 {
     if (!isset($_SESSION['user'])) {
-        header('Location: /login_test/');
+        header('Location: /crud_autenticacion/');
     }
 }
 function isAuthApi()
@@ -43,7 +43,7 @@ function isNotAuth()
     }
 }
 
-// ['TIENDA_ADMIN', 'TIENDA_USER']
+
 function hasPermission(array $permisos)
 {
 
@@ -55,7 +55,7 @@ function hasPermission(array $permisos)
 
     if (array_search(true, $comprobaciones) !== false) {
     } else {
-        header('Location: /login_test/logout');
+        header('Location: /crud_autenticacion/logout');
     }
 }
 

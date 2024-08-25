@@ -21,5 +21,12 @@
             </div>
         </div>
     </form>
+    <div class="row text-center mt-5">
+            <div class="col">
+                <a type="submit" class="btn btn-success w-20" href="/crud_autenticacion/registro">
+                    Registrarse
+                </a>
+            </div>
+        </div>
 </div>
 <script src="<?= asset('./build/js/auth/login.js') ?>"></script>
